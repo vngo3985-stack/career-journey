@@ -1,13 +1,21 @@
+async function loadCareers() {
+    const response = await fetch("data/careers.json");
+    const careers = await response.json();
 
-const exploreBtn = document.getElementById("exploreBtn");
+    const careerList = document.getElementById("career-list");
 
-const description = document.getElementById("description");
+    careers.forEach(career => {
+        const card = document.createElement("div");
 
-exploreBtn.addEventListener("click", function() {
+        card.innerHTML = `
+            <h2>${career.name}</h2>
+            <p>${career.field}</p>
+            <p>${career.salary}</p>
+            <p>${career.description}</p>
+        `;
 
-    description.innerText =
-        "Lập trình viên phần mềm phân tích yêu cầu, viết code, kiểm thử và sửa lỗi phần mềm. Bạn sẽ cần học lập trình, tư duy logic và làm việc nhóm.";
+        careerList.appendChild(card);
+    });
+}
 
-    exploreBtn.innerText = "Đã khám phá";
-
-});
+loadCareers();

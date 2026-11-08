@@ -1,0 +1,16 @@
+[
+  {
+    "id": "software-developer",
+    "name": "Lập trình viên",
+    "field": "Công nghệ thông tin",
+    "salary": "10-25 triệu/tháng",
+    "description": "Phát triển website, ứng dụng và phần mềm."
+  },
+  {
+    "id": "graphic-designer",
+    "name": "Nhà thiết kế đồ họa",
+    "field": "Thiết kế",
+    "salary": "8-18 triệu/tháng",
+    "description": "Thiết kế hình ảnh, giao diện và sản phẩm truyền thông."
+  }
+]
